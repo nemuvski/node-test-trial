@@ -1,0 +1,20 @@
+{
+  "name": "node-test-trial",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./out",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "npm run typecheck",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node ./out/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  }
+}
